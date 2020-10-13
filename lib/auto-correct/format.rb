@@ -7,9 +7,9 @@ class AutoCorrect
   rule "#{CJK}", '[0-9a-zA-Z]', space: true, reverse: true
 
   # SpecialSymbol
-# rule "#{CJK}", '[\|+$@#*]', space: true, reverse: true
-  rule "#{CJK}", '[\|+@#]', space: true, reverse: true
-  rule "#{CJK}", '[*]', reverse: true
+  rule "#{CJK}", '[\|+$@#*]', space: true, reverse: true
+# rule "#{CJK}", '[\|+@#]', space: true, reverse: true
+# rule "#{CJK}", '[*]', reverse: true
 
 
   rule "#{CJK}", '[\[\(‘“]', space: true
@@ -23,6 +23,7 @@ class AutoCorrect
   class << self
     FULLDATE_RE = /#{SPACE}{0,}\d+#{SPACE}{0,}年#{SPACE}{0,}\d+#{SPACE}{0,}月#{SPACE}{0,}\d+#{SPACE}{0,}[日号]#{SPACE}{0,}/u
     DASH_HAN_RE = /([#{CJK}）】」》”’])([\-]+)([#{CJK}（【「《“‘])/
+    STAR_HAN_RE = /([#])([\-]+)([#{CJK}])/
     LEFT_QUOTE_RE = /#{SPACE}([（【「《])/
     RIGHT_QUOTE_RE = /([）】」》])#{SPACE}/
 
