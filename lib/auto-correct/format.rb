@@ -7,7 +7,9 @@ class AutoCorrect
   rule "#{CJK}", '[0-9a-zA-Z]', space: true, reverse: true
 
   # SpecialSymbol
-  rule "#{CJK}", '[\|+$@#*]', space: true, reverse: true
+# rule "#{CJK}", '[\|+$@#*]', space: true, reverse: true
+  rule "#{CJK}", '[\|+$]', space: true, reverse: true
+
   rule "#{CJK}", '[\[\(‘“]', space: true
   rule '[’”\]\)!%]', "#{CJK}", space: true
   rule '[”\]\)!]', '[a-zA-Z0-9]+', space: true
