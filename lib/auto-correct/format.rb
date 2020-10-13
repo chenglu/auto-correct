@@ -8,10 +8,7 @@ class AutoCorrect
 
   # SpecialSymbol
 # rule "#{CJK}", '[\|+$@#*]', space: true, reverse: true
-  rule "#{CJK}", '[\|+$]', space: true, reverse: true
-  
-  # Discourse
-  rule "#{CJK}", '[\|+@#*]', reverse: true
+  rule "#{CJK}", '[\|+@#]', reverse: true
 
   rule "#{CJK}", '[\[\(‘“]', space: true
   rule '[’”\]\)!%]', "#{CJK}", space: true
